@@ -121,7 +121,7 @@ h1 {
 h2 {
 	font-family: 'Raleway', sans-serif;
 	/*font-size: 32px;*/
-	font-size: 1.2vw;
+	font-size: 100%;
 	text-shadow: 0.1vmax 0.1vmax 1vmax black;
 }
 .parallax {
