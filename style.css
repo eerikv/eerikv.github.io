@@ -84,8 +84,8 @@ h2 {
 
 @media only screen and (max-width : 720px) {
 	ul {
-		margin-left: -10vw;
-		margin-right: -10vw;
+		margin-left: -1.8vw;
+		margin-right: -1.8vw;
 		font-size: 5vw;
 	}
 	li a {
