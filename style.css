@@ -8,6 +8,10 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	min-height: 100%;
 }
 
 /* LIST */
@@ -25,8 +29,9 @@ ul {
 	position: sticky;
 	top: 0;
 	margin-top: 4vw;
-	margin-left: -1vw;
-	margin-right: -1vw;
+	*margin-left: -1vw;
+	*margin-right: -1vw;
+	width: 100%;
 	overflow: hidden;
 	background-color: #000000;
 	background-color: rgba(0,0,0,0.6);
@@ -82,44 +87,50 @@ h2 {
 	font-size: 1.2vw;
 	text-shadow: 0.1vmax 0.1vmax 1vmax black;
 	padding-bottom: 2vh;
+	padding-left: 1vh;
+	padding-right: 1vh;
 }
 
 /* IMAGES */
 
+.container {
+	display: flex;
+	flex-direction: row;
+	flex-grow: 5;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
 div.gallery {
     border: 1px solid black;
-	padding-bottom: -10px;
 }
 div.gallery:hover {
-    border: 1px solid black;
+    border: 1px solid #777;
 	box-shadow: 0px 2px 10px black;
+	transition: .5s ease;
+	filter: contrast(80%);
 }
 div.gallery img {
+	display: block;
     width: 100%;
     height: auto;
 }
-div.gallery img:hover {
-	filter: contrast(90%);
-}
 div.desc {
-	*background-color: black;
-	*background: linear-gradient(to top, #dbdbdb, white);
-	background: linear-gradient(to top, black, #333);
-    padding: 10px;
+    padding: 1vmax;
     text-align: center;
-	font-family: 'Montserrat', sans-serif;
-	color: white;
-	font-size: 1.4vw;
+	background: linear-gradient(to top, #bababa, white);
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.5vw;
 }
 * {
     box-sizing: border-box;
 }
 .responsive {
-    padding: 0 6px;
+    padding: 1vmax 1vmax;
     float: left;
     width: 24.99999%;
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 700px) {
     .responsive {
         width: 49.99999%;
         margin: 6px 0;
@@ -136,11 +147,27 @@ div.desc {
 		font-size: 6vw;
 	}
 }
-
 .clearfix:after {
     content: "";
     display: table;
     clear: both;
+}
+
+/* PARALLAX */
+
+.parallax {
+	background-color: white;
+	background-image: url("stripes-light.png");
+	*transform: skew(0deg, -4deg);
+	*margin-top: 1vmax;
+	padding: 2vmax;
+	width: 100%;
+	*padding-top: 2vmax;
+	*padding-left: 2vmax;
+	*padding-right: 2vmax;
+	*padding-bottom: 35vmax;
+	*margin-left: -1vmax;
+	*margin-right: -1vmax;
 }
 
 /**** MOBILE ****/
@@ -164,40 +191,40 @@ div.desc {
 	h2 {
 		font-size: 100%;
 	}
-}
-.parallax {
-	background-color: white;
-	background-image: url("stripes-light.png");
-	*transform: skew(0deg, -4deg);
-	*margin-top: 1vmax;
-	padding-top: 2vmax;
-	padding-left: 2vmax;
-	padding-right: 2vmax;
-	padding-bottom: 50vmax;
-	margin-left: -1vmax;
-	margin-right: -1vmax;
-	*bottom: 10px;
+	.parallax {
+		padding-bottom: 4vmax;
+	}
 }
 
 /* FOOTER */
 
 #footer {
-	/* TEXT */
+	position: absolute;
 	font-family: 'Oswald', sans-serif;
+	font-size: 0.6vmax;
+	color: white;
+	text-align: center;
+	background-color: gray;
+	*padding: 1vmax;
+	bottom: 0;
+	width: 100%;
+	
+	/* TEXT */
+	/*font-family: 'Oswald', sans-serif;
 	*font-size: 12px;
 	font-size: 0.6vmax;
 	color: white;
 	text-align: center;
 	/* OTHER */
-	*z-index: 10;
-	position: fixed;
-	bottom: 0vh;
+	/**z-index: 10;
+	*position: fixed;
+	*bottom: 0vh;
 	right: 0vw;
 	left: 0vw;
-	padding: 0;
+	padding: -10vmax;
 	height: 2vmax;
-	background-color: black;
-	box-shadow: 0vh 0vh 10px black;
+	background-color: gray;
+	box-shadow: 0vh 0vh 10px black;*/
 }
 
 
