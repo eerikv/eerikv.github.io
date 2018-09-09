@@ -9,7 +9,9 @@ body {
 	background-size: cover;
 	background-attachment: fixed;
 }
+
 /* LIST */
+
 ul {
 	list-style: none;
 	margin: 0;
@@ -56,7 +58,9 @@ li a:hover:not(.selected) {
 	background-color: rgba(0,0,0,0.2);
 	text-shadow: 0 0 3px white;
 }
+
 /* CONTENT */
+
 .headerimg {
 	display: block;
 	margin-left: auto;
@@ -80,12 +84,61 @@ h2 {
 	padding-bottom: 2vh;
 }
 
+/* IMAGES */
+
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 720px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+/*.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}*/
+
 /**** MOBILE ****/
 
 @media only screen and (max-width : 720px) {
 	ul {
-		margin-left: -1.8vw;
-		margin-right: -1.8vw;
+		margin-left: -1vw;
+		margin-right: -1vw;
 		font-size: 5vw;
 	}
 	li a {
@@ -113,7 +166,9 @@ h2 {
 	margin-left: -1vmax;
 	margin-right: -1vmax;
 }
+
 /* FOOTER */
+
 #footer {
 	/* TEXT */
 	font-family: 'Oswald', sans-serif;
