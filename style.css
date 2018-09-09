@@ -87,51 +87,61 @@ h2 {
 /* IMAGES */
 
 div.gallery {
-    border: 1px solid #ccc;
+    border: 1px solid black;
+	padding-bottom: -10px;
 }
-
 div.gallery:hover {
-    border: 1px solid #777;
+    border: 1px solid black;
+	box-shadow: 0px 2px 10px black;
 }
-
 div.gallery img {
     width: 100%;
     height: auto;
 }
-
-div.desc {
-    padding: 15px;
-    text-align: center;
+div.gallery img:hover {
+	filter: contrast(90%);
 }
-
+div.desc {
+	*background-color: black;
+	*background: linear-gradient(to top, #dbdbdb, white);
+	background: linear-gradient(to top, black, #333);
+    padding: 10px;
+    text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+	font-size: 1.4vw;
+}
 * {
     box-sizing: border-box;
 }
-
 .responsive {
     padding: 0 6px;
     float: left;
     width: 24.99999%;
 }
-
 @media only screen and (max-width: 720px) {
     .responsive {
         width: 49.99999%;
         margin: 6px 0;
     }
+	div.desc {
+		font-size: 4vw;
+	}
 }
-
 @media only screen and (max-width: 500px) {
     .responsive {
         width: 100%;
     }
+	div.desc {
+		font-size: 6vw;
+	}
 }
 
-/*.clearfix:after {
+.clearfix:after {
     content: "";
     display: table;
     clear: both;
-}*/
+}
 
 /**** MOBILE ****/
 
@@ -157,14 +167,16 @@ div.desc {
 }
 .parallax {
 	background-color: white;
+	background-image: url("stripes-light.png");
 	*transform: skew(0deg, -4deg);
-	*margin-top: 10vmax;
-	padding-top: 1vmax;
-	padding-left: 1vmax;
-	padding-right: 1vmax;
+	*margin-top: 1vmax;
+	padding-top: 2vmax;
+	padding-left: 2vmax;
+	padding-right: 2vmax;
 	padding-bottom: 50vmax;
 	margin-left: -1vmax;
 	margin-right: -1vmax;
+	*bottom: 10px;
 }
 
 /* FOOTER */
